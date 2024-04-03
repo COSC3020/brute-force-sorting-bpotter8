@@ -1,4 +1,4 @@
-function permutationSort(arr) {
+function permutationSort(array) {
     function sorted(arr) {
         for (let i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
@@ -19,7 +19,7 @@ function permutationSort(arr) {
         if (leftInd === arr.length - 1) {
             perms++;
             if (sorted(arr)) {
-                return;
+                return arr;
             }
         }
 
@@ -30,6 +30,6 @@ function permutationSort(arr) {
         }
     }
 
-    permute(arr, 0);
+    permute(array, 0);
     return perms;
 }
