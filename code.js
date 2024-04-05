@@ -27,12 +27,10 @@ function permutationSort(a) {
             perms += permute(arr, l);
             if (sorted(arr)){
                 return perms;
-            } else if (arr[leftInd] != arr[i]){
-                swap (arr, leftInd, i);
             }
+            swap (arr, leftInd, i);
         }
         return perms;
     }
-   
     return permute(a, 0);
 }
