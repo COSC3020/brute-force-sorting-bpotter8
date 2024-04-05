@@ -21,3 +21,11 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Answer:
+
+The best case input for the function would be an already sorted list. In this case, the number of permutations would only be one. If this the array is already sorted, the program would iterate through linearly so the best case runtime would be $\Theta (n)$.
+
+The worst case input for the function would be a completely unsorted list, as in the array is sorted completely backwards. In this case, the number of permutations would be the highest. The worst case runtime would be $\Theta (n \cdot n!)$.
+
+In the case of the permutations being randomly generated, we have no way of knowing the exact runtime. If there is no memory associated, the program would not know if the permutation was tried so the worst case runtime could potentially be infinite. The best case runtime would still be linear in the case of a perfectly sorted list, but the worst case runtime could possibly be infinite because of the unpredictability.
